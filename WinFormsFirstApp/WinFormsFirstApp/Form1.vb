@@ -3,7 +3,7 @@
         Dim enteredValue As String
         enteredValue = TextBox1.Text
 
-        ''enteredValue = "Added: " + enteredValue
+        enteredValue = "Added: " + enteredValue
         Label2.Text = enteredValue
     End Sub
 End Class
