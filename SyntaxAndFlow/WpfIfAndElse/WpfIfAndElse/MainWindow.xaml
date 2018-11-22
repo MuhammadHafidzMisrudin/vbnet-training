@@ -23,20 +23,20 @@
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuColorKey}}"/>
             </Label.Background>
         </Label>
-        <TextBox HorizontalAlignment="Left" Height="43" Margin="203,25,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="533" FontSize="24">
+        <TextBox x:Name="inputTextOne" HorizontalAlignment="Left" Margin="203,25,0,510" TextWrapping="Wrap" Width="533" FontSize="24">
             <TextBox.Background>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox HorizontalAlignment="Left" Height="43" Margin="203,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="533" FontSize="24">
+        <TextBox x:Name="inputTextTwo" HorizontalAlignment="Left" Height="43" Margin="203,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="533" FontSize="24">
             <TextBox.Background>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
             </TextBox.Background>
         </TextBox>
-        <CheckBox Content="Numeric" HorizontalAlignment="Left" Margin="203,159,0,0" VerticalAlignment="Top" Height="27" Width="84"/>
-        <TextBox HorizontalAlignment="Left" Height="190" Margin="203,212,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="533" BorderBrush="#FF831302"/>
-        <Button Content="Enter" HorizontalAlignment="Left" Margin="261,433,0,0" VerticalAlignment="Top" Width="150" Height="36" Background="#FFDDDDDD"/>
-        <Button Content="Clear" HorizontalAlignment="Left" Margin="461,433,0,0" VerticalAlignment="Top" Width="150" Height="36"/>
+        <CheckBox x:Name="checkNumeric" Content="Numeric" HorizontalAlignment="Left" Margin="203,159,0,0" VerticalAlignment="Top" Height="27" Width="84" FontSize="14"/>
+        <TextBox x:Name="textOutput" HorizontalAlignment="Left" Height="190" Margin="203,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="533" BorderBrush="#FF831302" FontSize="24"/>
+        <Button x:Name="buttonEnter" Content="Enter" Click="OutputHandler" HorizontalAlignment="Left" Margin="261,433,0,0" VerticalAlignment="Top" Width="150" Height="36" Background="#FFDDDDDD"/>
+        <Button x:Name="buttonClear" Content="Clear" Click="OutputClear" HorizontalAlignment="Left" Margin="461,433,0,0" VerticalAlignment="Top" Width="150" Height="36"/>
 
     </Grid>
 </Window>
