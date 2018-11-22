@@ -1,0 +1,42 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfIfAndElse"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="610" Width="800">
+    <Grid Margin="0,0,0,1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Input 1:" HorizontalAlignment="Left" Margin="53,25,0,0" VerticalAlignment="Top" Height="43" Width="120" FontSize="24" Foreground="#FF23C709" BorderBrush="#FFF90303">
+            <Label.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuColorKey}}"/>
+            </Label.Background>
+        </Label>
+        <Label Content="Input 2:" HorizontalAlignment="Left" Margin="53,96,0,0" VerticalAlignment="Top" Height="43" Width="120" FontSize="24" Foreground="#FF23C709">
+            <Label.BorderBrush>
+                <SolidColorBrush Color="#FFFB0101"/>
+            </Label.BorderBrush>
+            <Label.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuColorKey}}"/>
+            </Label.Background>
+        </Label>
+        <TextBox HorizontalAlignment="Left" Height="43" Margin="203,25,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="533" FontSize="24">
+            <TextBox.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Height="43" Margin="203,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="533" FontSize="24">
+            <TextBox.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+            </TextBox.Background>
+        </TextBox>
+        <CheckBox Content="Numeric" HorizontalAlignment="Left" Margin="203,159,0,0" VerticalAlignment="Top" Height="27" Width="84"/>
+        <TextBox HorizontalAlignment="Left" Height="190" Margin="203,212,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="533" BorderBrush="#FF831302"/>
+        <Button Content="Enter" HorizontalAlignment="Left" Margin="261,433,0,0" VerticalAlignment="Top" Width="150" Height="36" Background="#FFDDDDDD"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="461,433,0,0" VerticalAlignment="Top" Width="150" Height="36"/>
+
+    </Grid>
+</Window>
