@@ -8,6 +8,11 @@
         Dim dbl1 As Double
         Dim dbl2 As Double
 
+        Const ADD As String = "Add",
+              SUBTRACT As String = "Subtract",
+              MULTIPLY As String = "Multiply",
+              DIVIDE As String = "Divide"
+
         txtOutput.Text = ""
 
         If IsNumeric(str1) And IsNumeric(str2) Then
@@ -20,25 +25,25 @@
 
         Dim operation As String = "None"
         If optAdd.IsChecked Then
-            operation = "Add"
+            operation = ADD
         ElseIf optSubtract.IsChecked Then
-            operation = "Subtract"
+            operation = SUBTRACT
         ElseIf optMultiply.IsChecked Then
-            operation = "Multiply"
+            operation = MULTIPLY
         ElseIf optDivide.IsChecked Then
-            operation = "Divide"
+            operation = DIVIDE
         End If
         Output("Select operation: " + operation)
 
         Dim result As Double
         Select Case operation
-            Case "Add"
+            Case ADD
                 result = dbl1 + dbl2
-            Case "Subtract"
+            Case SUBTRACT
                 result = dbl1 - dbl2
-            Case "Multiply"
+            Case MULTIPLY
                 result = dbl1 * dbl2
-            Case "Divide"
+            Case DIVIDE
                 result = dbl1 / dbl2
             Case Else
                 Output("Error no operation was selected.")
