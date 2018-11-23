@@ -41,6 +41,11 @@
 
     End Sub
 
+    ''' <summary>
+    ''' Method to check the result output whether is positive
+    ''' Then outputs value with different text color in output label
+    ''' </summary>
+    ''' <param name="result"></param>
     Private Sub DisplayResult(result As Double)
 
         If result >= 0 Then
@@ -53,11 +58,18 @@
 
     End Sub
 
+    ''' <summary>
+    ''' Method to display error message with red color text
+    ''' </summary>
+    ''' <param name="errorMsg"></param>
     Private Sub DisplayError(errorMsg As String)
         outputCalculation.Content = errorMsg
         outputCalculation.Foreground = Brushes.Red
     End Sub
 
+    ''' <summary>
+    ''' Clear or reset output label text
+    ''' </summary>
     Private Sub ClearContent()
         outputCalculation.Content = ""
     End Sub
