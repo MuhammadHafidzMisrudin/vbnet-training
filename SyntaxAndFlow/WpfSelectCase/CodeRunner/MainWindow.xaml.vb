@@ -1,5 +1,10 @@
 ﻿Class MainWindow
 
+    Const ADD As String = "Add",
+          SUBTRACT As String = "Subtract",
+          MULTIPLY As String = "Multiply",
+          DIVIDE As String = "Divide"
+
     Sub RunCode(sender As Object, e As RoutedEventArgs)
         'Add code here
 
@@ -8,11 +13,6 @@
         Dim dbl1 As Double
         Dim dbl2 As Double
 
-        Const ADD As String = "Add",
-              SUBTRACT As String = "Subtract",
-              MULTIPLY As String = "Multiply",
-              DIVIDE As String = "Divide"
-
         txtOutput.Text = ""
 
         If IsNumeric(str1) And IsNumeric(str2) Then
@@ -20,9 +20,10 @@
             dbl2 = Double.Parse(str2)
         Else
             Output("Please enter valid numbers!")
-            Return 'Exit the subroutine.
+            Return 'Exit the subroutine'
         End If
 
+        'Check if user selects any optional operation'
         Dim operation As String = "None"
         If optAdd.IsChecked Then
             operation = ADD
@@ -33,22 +34,16 @@
         ElseIf optDivide.IsChecked Then
             operation = DIVIDE
         End If
-        Output("Select operation: " + operation)
 
+        'Check if optional operation is None, do nothing'
+        If operation = "None" Then
+            Output("Select operation: " + operation)
+            Return 'Exit the subroutine' 
+        End If
+
+        'Invoke Calculation()'
         Dim result As Double
-        Select Case operation
-            Case ADD
-                result = dbl1 + dbl2
-            Case SUBTRACT
-                result = dbl1 - dbl2
-            Case MULTIPLY
-                result = dbl1 * dbl2
-            Case DIVIDE
-                result = dbl1 / dbl2
-            Case Else
-                Output("Error no operation was selected.")
-                Return
-        End Select
+        result = CalculateMethod(dbl1, dbl2, operation)
         Output("Result from selected operation: " + result.ToString())
 
     End Sub
@@ -59,6 +54,27 @@
 
     Sub ClearOutput(sender As Object, e As RoutedEventArgs)
         txtOutput.Text = ""
+        optAdd.IsChecked = False
+        optSubtract.IsChecked = False
+        optMultiply.IsChecked = False
+        optDivide.IsChecked = False
     End Sub
+
+    Function CalculateMethod(dbl1 As Double, dbl2 As Double, op As String) As String
+
+        Dim result As Double
+        Select Case op
+            Case ADD
+                result = dbl1 + dbl2
+            Case SUBTRACT
+                result = dbl1 - dbl2
+            Case MULTIPLY
+                result = dbl1 * dbl2
+            Case DIVIDE
+                result = dbl1 / dbl2
+        End Select
+
+        Return result
+    End Function
 
 End Class
