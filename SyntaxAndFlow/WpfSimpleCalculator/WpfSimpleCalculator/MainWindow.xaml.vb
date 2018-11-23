@@ -21,8 +21,35 @@
             Return 'Exit the subroutine'
         End If
 
-        'Invoke operation.'
-        outputCalculation.Content = operation
+        'Perform operation.'
+        Dim result As Double
+        If operation = ADD Then
+            result = dbl1 + dbl2
+        ElseIf operation = SUBTRACT Then
+            result = dbl1 - dbl2
+        ElseIf operation = MULTIPLY Then
+            result = dbl1 * dbl2
+        ElseIf operation = DIVIDE Then
+            result = dbl1 / dbl2
+            If Double.IsPositiveInfinity(result) Or Double.IsNegativeInfinity(result) Then
+                DisplayError("Error, divide by zero")
+                Return
+            End If
+        End If
+
+        DisplayResult(result)
+
+    End Sub
+
+    Private Sub DisplayResult(result As Double)
+
+        If result >= 0 Then
+            outputCalculation.Content = result.ToString()
+            outputCalculation.Foreground = Brushes.Blue
+        Else
+            outputCalculation.Content = result.ToString()
+            outputCalculation.Foreground = Brushes.Red
+        End If
 
     End Sub
 

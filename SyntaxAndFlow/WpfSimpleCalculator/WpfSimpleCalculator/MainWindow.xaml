@@ -30,9 +30,6 @@
         <Button x:Name="btnAdd" Click="BtnAdd_Click" Content="+" Margin="53,221,0,0" VerticalAlignment="Top" Height="54" RenderTransformOrigin="1.152,-0.088" BorderBrush="#FF1FF00A" FontSize="36" HorizontalAlignment="Left" Width="111"/>
         <Button x:Name="btnSubtract" Click="BtnSubtract_Click" Content="-" HorizontalAlignment="Left" Margin="191,221,0,0" VerticalAlignment="Top" Width="111" Height="54" RenderTransformOrigin="1.152,-0.088" BorderBrush="#FF1FF00A" FontSize="36"/>
         <Label x:Name="outputCalculation" Content="" HorizontalAlignment="Left" Margin="53,33,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="143" Width="692" BorderBrush="#FFEA330B" Background="#FFBACFCD" FontSize="18"/>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="btnMultiply" Content="x" HorizontalAlignment="Left" Margin="337,221,0,0" VerticalAlignment="Top" Width="111" Height="54" Grid.ColumnSpan="2" BorderBrush="#FF16F000" FontSize="36"/>
         <Button x:Name="btnDivide" Content="÷ " HorizontalAlignment="Left" Margin="56,221,0,0" VerticalAlignment="Top" Width="111" Height="54" BorderBrush="#FF16F000" FontSize="36" Grid.Column="1"/>
 
