@@ -1,4 +1,6 @@
-﻿Class MainWindow
+﻿Imports WpfSimpleCalculator.UtilitiesSharedClass
+
+Class MainWindow
 
     Const ADD As String = "Add"
     Const SUBTRACT As String = "Subtract"
@@ -27,19 +29,23 @@
         If operation = ADD Then
             ''result = dbl1 + dbl2
             ''result = AddValues(dbl1, dbl2) 'Invoke method using Module'
-            result = calUtilObj.AddValues(dbl1, dbl2) 'Invoke method from Custom Class'
+            ''result = calUtilObj.AddValues(dbl1, dbl2) 'Invoke method from Custom Class'
+            result = CalculatorUtilitySharedClass.AddValues(dbl1, dbl2) 'Invoke shared member of method'
         ElseIf operation = SUBTRACT Then
             ''result = dbl1 - dbl2
             ''result = SubtractValues(dbl1, dbl2)
-            result = calUtilObj.SubtractValues(dbl1, dbl2)
+            ''result = calUtilObj.SubtractValues(dbl1, dbl2)
+            result = CalculatorUtilitySharedClass.SubtractValues(dbl1, dbl2)
         ElseIf operation = MULTIPLY Then
             ''result = dbl1 * dbl2
             ''result = MultiplyValues(dbl1, dbl2)
-            result = calUtilObj.MultiplyValues(dbl1, dbl2)
+            ''result = calUtilObj.MultiplyValues(dbl1, dbl2)
+            result = CalculatorUtilitySharedClass.MultiplyValues(dbl1, dbl2)
         ElseIf operation = DIVIDE Then
             ''result = dbl1 / dbl2
             ''result = DivideValues(dbl1, dbl2)
-            result = calUtilObj.DivideValues(dbl1, dbl2)
+            ''result = calUtilObj.DivideValues(dbl1, dbl2)
+            result = CalculatorUtilitySharedClass.DivideValues(dbl1, dbl2)
             If Double.IsPositiveInfinity(result) Or Double.IsNegativeInfinity(result) Then
                 DisplayError("Error, divide by zero")
                 Return
