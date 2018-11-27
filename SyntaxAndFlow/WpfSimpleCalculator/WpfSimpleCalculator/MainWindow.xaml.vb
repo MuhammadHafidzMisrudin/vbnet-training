@@ -26,8 +26,9 @@ Class MainWindow
         'Perform operation.'
         Dim result As Double
         Dim calUtilObj As New CalculatorUtility() 'Create an instance of Calculator Utility Class'
-        calUtilObj.value1 = dbl1
+        calUtilObj.value1 = dbl1 'Add instance fields to set variables'
         calUtilObj.value2 = dbl2
+        Console.WriteLine(calUtilObj)
         If operation = ADD Then
             'result = dbl1 + dbl2
             'result = AddValues(dbl1, dbl2) 'Invoke method using Module'

@@ -1,7 +1,27 @@
 ﻿Public Class CalculatorUtility
 
-    Public value1 As Double
-    Public value2 As Double
+    'Public value1 As Double
+    'Public value2 As Double
+    Private _value1 As Double
+    Private _value2 As Double
+
+    Property value1 As Double
+        Get
+            Return _value1
+        End Get
+        Set(value As Double)
+            _value1 = value
+        End Set
+    End Property
+
+    Property value2 As Double
+        Get
+            Return _value2
+        End Get
+        Set(value As Double)
+            _value2 = value
+        End Set
+    End Property
 
     Public Function AddValues() As Double
         Return value1 + value2
