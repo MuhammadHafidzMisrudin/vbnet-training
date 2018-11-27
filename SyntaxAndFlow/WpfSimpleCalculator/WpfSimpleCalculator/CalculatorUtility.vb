@@ -1,17 +1,21 @@
 ﻿Public Class CalculatorUtility
-    Public Function AddValues(var1 As Double, var2 As Double) As Double
-        Return var1 + var2
+
+    Public value1 As Double
+    Public value2 As Double
+
+    Public Function AddValues() As Double
+        Return value1 + value2
     End Function
 
-    Public Function SubtractValues(var1 As Double, var2 As Double) As Double
-        Return var1 - var2
+    Public Function SubtractValues() As Double
+        Return value1 - value2
     End Function
 
-    Public Function MultiplyValues(var1 As Double, var2 As Double) As Double
-        Return var1 * var2
+    Public Function MultiplyValues() As Double
+        Return value1 * value2
     End Function
 
-    Public Function DivideValues(var1 As Double, var2 As Double) As Double
-        Return var1 / var2
+    Public Function DivideValues() As Double
+        Return value1 / value2
     End Function
 End Class
