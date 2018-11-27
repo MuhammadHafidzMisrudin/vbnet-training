@@ -25,9 +25,9 @@ Class MainWindow
 
         'Perform operation.'
         Dim result As Double
-        Dim calUtilObj As New CalculatorUtility() 'Create an instance of Calculator Utility Class'
-        calUtilObj.value1 = dbl1 'Add instance fields to set variables'
-        calUtilObj.value2 = dbl2
+        Dim calUtilObj As New CalculatorUtility(dbl1, dbl2) 'Create an instance of Calculator Utility Class'
+        'calUtilObj.value1 = dbl1 'Add instance fields to set variables'
+        'calUtilObj.value2 = dbl2
         Console.WriteLine(calUtilObj)
         If operation = ADD Then
             'result = dbl1 + dbl2

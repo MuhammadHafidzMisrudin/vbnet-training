@@ -23,6 +23,12 @@
         End Set
     End Property
 
+    Sub New(dbl1 As Double, dbl2 As Double)
+        value1 = dbl1
+        value2 = dbl2
+    End Sub
+
+
     Public Function AddValues() As Double
         Return value1 + value2
     End Function
