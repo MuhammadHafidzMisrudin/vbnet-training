@@ -8,8 +8,11 @@
 
     'Public value1 As Double
     'Public value2 As Double
+
+    'Define private fields'
     Private _value1 As Double
     Private _value2 As Double
+    Private _result As Double
 
     Property value1 As Double
         Get
@@ -29,6 +32,12 @@
         End Set
     End Property
 
+    ReadOnly Property result As Double
+        Get
+            Return _result
+        End Get
+    End Property
+
     'Create a Constructor'
     Sub New(dbl1 As Double, dbl2 As Double)
         'Set properties to parameters'
@@ -37,22 +46,26 @@
     End Sub
 
     'Addition method'
-    Public Function AddValues() As Double
-        Return value1 + value2
-    End Function
+    Public Sub AddValues()
+        'Return value1 + value2
+        _result = value1 + value2
+    End Sub
 
     'Substraction method'
-    Public Function SubtractValues() As Double
-        Return value1 - value2
-    End Function
+    Public Sub SubtractValues()
+        'Return value1 - value2
+        _result = value1 - value2
+    End Sub
 
     'Multiplication method'
-    Public Function MultiplyValues() As Double
-        Return value1 * value2
-    End Function
+    Public Sub MultiplyValues()
+        'Return value1 * value2
+        _result = value1 * value2
+    End Sub
 
     'Division method'
-    Public Function DivideValues() As Double
-        Return value1 / value2
-    End Function
+    Public Sub DivideValues()
+        'Return value1 / value2
+        _result = value1 / value2
+    End Sub
 End Class

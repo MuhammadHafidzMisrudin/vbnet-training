@@ -24,7 +24,7 @@ Class MainWindow
         End If
 
         'Perform operation.'
-        Dim result As Double
+        'Dim result As Double
         Dim calUtilObj As New CalculatorUtility(dbl1, dbl2) 'Create an instance of Calculator Utility Class'
         'calUtilObj.value1 = dbl1 'Add instance fields to set variables'
         'calUtilObj.value2 = dbl2
@@ -33,29 +33,34 @@ Class MainWindow
             'result = dbl1 + dbl2
             'result = AddValues(dbl1, dbl2) 'Invoke method using Module'
             'result = CalculatorUtilitySharedClass.AddValues(dbl1, dbl2) 'Invoke shared member of method'
-            result = calUtilObj.AddValues() 'Invoke method from Custom Class'
+            'result = calUtilObj.AddValues() 'Invoke method from Custom Class'
+            calUtilObj.AddValues()
         ElseIf operation = CalculatorUtility.SUBTRACT Then
             'result = dbl1 - dbl2
             'result = SubtractValues(dbl1, dbl2)
             'result = CalculatorUtilitySharedClass.SubtractValues(dbl1, dbl2)
-            result = calUtilObj.SubtractValues()
+            'result = calUtilObj.SubtractValues()
+            calUtilObj.SubtractValues()
         ElseIf operation = CalculatorUtility.MULTIPLY Then
             'result = dbl1 * dbl2
             'result = MultiplyValues(dbl1, dbl2)
             'result = CalculatorUtilitySharedClass.MultiplyValues(dbl1, dbl2)
-            result = calUtilObj.MultiplyValues()
+            'result = calUtilObj.MultiplyValues()
+            calUtilObj.MultiplyValues()
         ElseIf operation = CalculatorUtility.DIVIDE Then
             'result = dbl1 / dbl2
             'result = DivideValues(dbl1, dbl2)
             'result = CalculatorUtilitySharedClass.DivideValues(dbl1, dbl2)
-            result = calUtilObj.DivideValues()
-            If Double.IsPositiveInfinity(result) Or Double.IsNegativeInfinity(result) Then
-                DisplayError("Error, divide by zero")
-                Return
-            End If
+            'result = calUtilObj.DivideValues()
+            calUtilObj.DivideValues()
         End If
 
-        DisplayResult(result)
+        If Double.IsPositiveInfinity(calUtilObj.result) Or Double.IsNegativeInfinity(calUtilObj.result) Then
+            DisplayError("Error, divide by zero")
+            Return
+        End If
+
+        DisplayResult(calUtilObj.result)
 
     End Sub
 
