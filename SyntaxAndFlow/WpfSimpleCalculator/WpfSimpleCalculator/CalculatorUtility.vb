@@ -1,5 +1,11 @@
 ﻿Public Class CalculatorUtility
 
+    'Define public shared values as class fields'
+    Public Shared ADD As String = "Add",
+                  SUBTRACT As String = "Subtract",
+                  MULTIPLY As String = "Multiply",
+                  DIVIDE As String = "Divide"
+
     'Public value1 As Double
     'Public value2 As Double
     Private _value1 As Double
@@ -25,6 +31,7 @@
 
     'Create a Constructor'
     Sub New(dbl1 As Double, dbl2 As Double)
+        'Set properties to parameters'
         value1 = dbl1
         value2 = dbl2
     End Sub

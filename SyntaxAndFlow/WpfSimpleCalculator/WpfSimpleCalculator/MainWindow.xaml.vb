@@ -2,10 +2,10 @@
 
 Class MainWindow
 
-    Const ADD As String = "Add"
-    Const SUBTRACT As String = "Subtract"
-    Const MULTIPLY As String = "Multiply"
-    Const DIVIDE As String = "Divide"
+    'Const ADD As String = "Add"
+    'Const SUBTRACT As String = "Subtract"
+    'Const MULTIPLY As String = "Multiply"
+    'Const DIVIDE As String = "Divide"
 
     Sub Calculation(operation As String)
         Dim str1 As String = textInputOne.Text
@@ -29,22 +29,22 @@ Class MainWindow
         'calUtilObj.value1 = dbl1 'Add instance fields to set variables'
         'calUtilObj.value2 = dbl2
         Console.WriteLine(calUtilObj)
-        If operation = ADD Then
+        If operation = CalculatorUtility.ADD Then
             'result = dbl1 + dbl2
             'result = AddValues(dbl1, dbl2) 'Invoke method using Module'
             'result = CalculatorUtilitySharedClass.AddValues(dbl1, dbl2) 'Invoke shared member of method'
             result = calUtilObj.AddValues() 'Invoke method from Custom Class'
-        ElseIf operation = SUBTRACT Then
+        ElseIf operation = CalculatorUtility.SUBTRACT Then
             'result = dbl1 - dbl2
             'result = SubtractValues(dbl1, dbl2)
             'result = CalculatorUtilitySharedClass.SubtractValues(dbl1, dbl2)
             result = calUtilObj.SubtractValues()
-        ElseIf operation = MULTIPLY Then
+        ElseIf operation = CalculatorUtility.MULTIPLY Then
             'result = dbl1 * dbl2
             'result = MultiplyValues(dbl1, dbl2)
             'result = CalculatorUtilitySharedClass.MultiplyValues(dbl1, dbl2)
             result = calUtilObj.MultiplyValues()
-        ElseIf operation = DIVIDE Then
+        ElseIf operation = CalculatorUtility.DIVIDE Then
             'result = dbl1 / dbl2
             'result = DivideValues(dbl1, dbl2)
             'result = CalculatorUtilitySharedClass.DivideValues(dbl1, dbl2)
@@ -73,7 +73,6 @@ Class MainWindow
             outputCalculation.Content = result.ToString()
             outputCalculation.Foreground = Brushes.Red
         End If
-
     End Sub
 
     ''' <summary>
@@ -93,18 +92,22 @@ Class MainWindow
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As RoutedEventArgs)
-        Calculation(ADD)
+        'Calculation(ADD)
+        Calculation(CalculatorUtility.ADD)
     End Sub
 
     Private Sub BtnSubtract_Click(sender As Object, e As RoutedEventArgs)
-        Calculation(SUBTRACT)
+        'Calculation(SUBTRACT)
+        Calculation(CalculatorUtility.SUBTRACT)
     End Sub
 
     Private Sub BtnMultiply_Click(sender As Object, e As RoutedEventArgs) Handles btnMultiply.Click
-        Calculation(MULTIPLY)
+        'Calculation(MULTIPLY)
+        Calculation(CalculatorUtility.MULTIPLY)
     End Sub
 
     Private Sub BtnDivide_Click(sender As Object, e As RoutedEventArgs) Handles btnDivide.Click
-        Calculation(DIVIDE)
+        'Calculation(DIVIDE)
+        Calculation(CalculatorUtility.DIVIDE)
     End Sub
 End Class
