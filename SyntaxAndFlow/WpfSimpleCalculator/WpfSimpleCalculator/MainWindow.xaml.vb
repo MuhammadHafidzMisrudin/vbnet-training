@@ -98,21 +98,21 @@ Class MainWindow
 
     Private Sub BtnAdd_Click(sender As Object, e As RoutedEventArgs)
         'Calculation(ADD)
-        Calculation(CalculatorUtility.ADD)
+        Calculation(CalculatorUtility.ADD) 'Class invokes directly public shared class field (static instance)
     End Sub
 
     Private Sub BtnSubtract_Click(sender As Object, e As RoutedEventArgs)
         'Calculation(SUBTRACT)
-        Calculation(CalculatorUtility.SUBTRACT)
+        Calculation(CalculatorUtility.SUBTRACT) 'Class invokes directly public shared class field (static instance)
     End Sub
 
     Private Sub BtnMultiply_Click(sender As Object, e As RoutedEventArgs) Handles btnMultiply.Click
         'Calculation(MULTIPLY)
-        Calculation(CalculatorUtility.MULTIPLY)
+        Calculation(CalculatorUtility.MULTIPLY) 'Class invokes directly public shared class field (static instance)
     End Sub
 
     Private Sub BtnDivide_Click(sender As Object, e As RoutedEventArgs) Handles btnDivide.Click
         'Calculation(DIVIDE)
-        Calculation(CalculatorUtility.DIVIDE)
+        Calculation(CalculatorUtility.DIVIDE) 'Class invokes directly public shared class field (static instance)
     End Sub
 End Class
