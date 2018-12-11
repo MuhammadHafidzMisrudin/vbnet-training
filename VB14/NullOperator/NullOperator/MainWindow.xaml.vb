@@ -16,13 +16,14 @@
         Output("")
 
         'Use and implement checking for null values with null-propagating operator (?.)'
-        Dim StringVariable As String = Nothing
-        Dim StrVarLength As Integer? = StringVariable?.Length
+        Dim StringVariableNew As String = Nothing
+        Dim StrVarLength As Integer? = StringVariableNew?.Length
         Output("String length for new variable = " + StrVarLength.ToString())
 
         Output("")
 
         Output("Length (explicitly use if clause) = " + If(StrVarLength Is Nothing, "0", StrVarLength.ToString()))
+        Output(If(StrVarLength Is Nothing, NameOf(StringVariableNew) + " is empty", StrVarLength.ToString()))
 
         Output("")
         Output("All done!")
