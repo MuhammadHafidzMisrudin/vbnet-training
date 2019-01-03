@@ -4,10 +4,30 @@ Imports WpfSimpleCalculator
 
 <TestClass()> Public Class UnitTest1
 
-    <TestMethod()> Public Sub TestMethod1()
+    <TestMethod()> Public Sub TestCheckInputParam1()
+        Dim param1 As Double = 1.0
+        Dim param2 As Double = 2.0
+        Dim test As New CalculatorUtility(1.0, 2.0)
+        Assert.AreEqual(1.0, test.value1)
+    End Sub
+
+    <TestMethod()> Public Sub TestCheckInputParam2()
+        Dim param1 As Double = 1.0
+        Dim param2 As Double = 2.0
+        Dim test As New CalculatorUtility(1.0, 2.0)
+        Assert.AreEqual(2.0, test.value2)
+    End Sub
+
+    <TestMethod()> Public Sub TestAddValuesMethod()
         Dim test As New CalculatorUtility(1.0, 2.0)
         test.AddValues()
         Assert.AreEqual(3.0, test.result)
+    End Sub
+
+    <TestMethod()> Public Sub TestSubtractValuesMethod()
+        Dim test As New CalculatorUtility(1.0, 2.0)
+        test.SubtractValues()
+        Assert.AreEqual(-1.0, test.result)
     End Sub
 
 End Class
