@@ -11,6 +11,13 @@ Imports WpfSimpleCalculator
         Assert.AreEqual(1.0, test.value1)
     End Sub
 
+    <TestMethod()> Public Sub TestCheckInputParam1NotSame()
+        Dim param1 As Double = 1.0
+        Dim param2 As Double = 2.0
+        Dim test As New CalculatorUtility(1.0, 2.0)
+        Assert.AreNotSame(-3.0, test.value1)
+    End Sub
+
     <TestMethod()> Public Sub TestCheckInputParam2()
         Dim param1 As Double = 1.0
         Dim param2 As Double = 2.0
