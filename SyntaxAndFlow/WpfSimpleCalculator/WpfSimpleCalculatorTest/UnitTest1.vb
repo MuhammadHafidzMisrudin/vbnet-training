@@ -44,4 +44,16 @@ Imports WpfSimpleCalculator
         Assert.AreEqual(-1.0, test.result)
     End Sub
 
+    <TestMethod()> Public Sub TestMultiplyValuesMethod()
+        Dim test As New CalculatorUtility(1.0, 2.0)
+        test.MultiplyValues()
+        Assert.AreEqual(2.0, test.result)
+    End Sub
+
+    <TestMethod()> Public Sub TestDivideValuesMethod()
+        Dim test As New CalculatorUtility(1.0, 2.0)
+        test.DivideValues()
+        Assert.AreEqual(0.5, test.result)
+    End Sub
+
 End Class
