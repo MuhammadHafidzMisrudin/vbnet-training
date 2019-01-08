@@ -1,6 +1,7 @@
 ﻿Imports System.Text
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
 Imports WpfSimpleCalculator
+Imports WpfSimpleCalculator.UtilitiesSharedClass
 
 <TestClass()> Public Class UnitTest1
 
@@ -54,6 +55,12 @@ Imports WpfSimpleCalculator
         Dim test As New CalculatorUtility(1.0, 2.0)
         test.DivideValues()
         Assert.AreEqual(0.5, test.result)
+    End Sub
+
+    <TestMethod()> Public Sub TestInstanceWithNoType()
+        Dim testMainWindow As New MainWindow
+        Dim testCalUtil As New CalculatorUtility(1.0, 2.0)
+        Assert.IsInstanceOfType(testCalUtil, Nothing, "Failed test case.")
     End Sub
 
 End Class
