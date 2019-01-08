@@ -8,21 +8,30 @@ Imports WpfSimpleCalculator.UtilitiesSharedClass
     <TestMethod()> Public Sub TestCheckInputParam1()
         Dim param1 As Double = 1.0
         Dim param2 As Double = 2.0
-        Dim test As New CalculatorUtility(1.0, 2.0)
+        Dim test As New CalculatorUtility(param1, param2)
         Assert.AreEqual(1.0, test.value1)
     End Sub
 
     <TestMethod()> Public Sub TestCheckInputParam1NotSameAsOutput()
         Dim param1 As Double = 1.0
         Dim param2 As Double = 2.0
-        Dim test As New CalculatorUtility(1.0, 2.0)
+        Dim test As New CalculatorUtility(param1, param2)
         Assert.AreNotEqual(-3.0, test.value1, "pass, param1 should not be equal as expected value")
+    End Sub
+
+    <TestMethod()> Public Sub TestCheckInputParam1IsNull()
+        Dim param1? As Double
+        Dim param2 As Double
+        param1 = Nothing
+        param2 = 2.0
+        Dim test As New CalculatorUtility(param1, param2)
+        Assert.IsNull(test.value1, "Failed, Param1 is not null")
     End Sub
 
     <TestMethod()> Public Sub TestCheckInputParam2()
         Dim param1 As Double = 1.0
         Dim param2 As Double = 2.0
-        Dim test As New CalculatorUtility(1.0, 2.0)
+        Dim test As New CalculatorUtility(param1, param2)
         Assert.AreEqual(2.0, test.value2)
     End Sub
 
