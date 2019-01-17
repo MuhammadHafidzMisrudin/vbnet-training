@@ -14,6 +14,7 @@
     Private _value2 As Double
     Private _result As Double
 
+    'Property for input 1'
     Property value1 As Double
         Get
             Return _value1
@@ -23,6 +24,7 @@
         End Set
     End Property
 
+    'Property for input 2'
     Property value2 As Double
         Get
             Return _value2
@@ -32,6 +34,7 @@
         End Set
     End Property
 
+    'Read-Only Property'
     ReadOnly Property result As Double
         Get
             Return _result
